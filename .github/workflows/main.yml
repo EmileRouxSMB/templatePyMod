@@ -39,12 +39,10 @@ jobs:
     - name: Test with pytest
       run: |
         pytest tests/test_*.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
-    - name: Coveralls GitHub Action
+    - name: Coveralls Python
       # You may pin to the exact commit or the version.
-      # uses: coverallsapp/github-action@8cbef1dea373ebce56de0a14c68d6267baa10b44
-      uses: coverallsapp/github-action@v1.1.2
-      with:
-        # 
-        github-token: ${{ github.token }}
+      # uses: AndreMiras/coveralls-python-action@4df6e2e1adfb34a7dd43bc9889f6f6144d005544
+      uses: AndreMiras/coveralls-python-action@v20200413
+
         
 
