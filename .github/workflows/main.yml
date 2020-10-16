@@ -38,4 +38,14 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest tests/test_*.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html  
+        pytest tests/test_*.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+    - name: Coveralls GitHub Action
+      # You may pin to the exact commit or the version.
+      # uses: coverallsapp/github-action@8cbef1dea373ebce56de0a14c68d6267baa10b44
+      uses: coverallsapp/github-action@v1.1.2
+      with:
+        # 
+        github-token: ${{ github.token }}
+        # Path to lcov file
+        path-to-lcov: ./coverage/lcov.info
+
