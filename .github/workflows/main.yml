@@ -44,6 +44,8 @@ jobs:
         pip install coveralls
         coverage run --source=templatePyMod -m pytest tests/
         coveralls
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         
 
