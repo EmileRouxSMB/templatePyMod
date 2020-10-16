@@ -1,0 +1,33 @@
+image: continuumio/miniconda3:latest
+
+#flake8:
+#  stage: Static Analysis
+#  script:
+#  - flake8 --max-line-length=120 pycopo/*.py
+
+#image: "python:3.7"
+
+#before_script:
+#  - python --version
+#  - pip install -r requirements.txt
+
+stages:
+  - Static Analysis
+  - Test_Build
+
+flake8:
+  stage: Static Analysis
+  allow_failure: true
+  script:
+    - pip install flake8
+    - flake8 templatePyMod/*.py
+
+
+testbuild :
+  stage: Test_Build
+  script:
+    - apt-get install -y libgl1-mesa-dev
+    - conda env create -f environment.yml
+    - source activate test_env
+    - python setup.py install
+    - cd test && pytest .  
