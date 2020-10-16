@@ -2,7 +2,7 @@ from setuptools import setup
 import templatePyMod
 
 setup(name='templatePyMod',
-      version=pycama.__version__,
+      version=templatePyMod.__version__,
       description="templatePyMod",
       long_description="templatePyMod",
       author="Ludovic Charleux, Emile Roux",
