@@ -1,4 +1,4 @@
-![badge CI](https://github.com/EmileRouxSMB/templatePyMod/workflows/CI/badge.png)
+![badge CI](https://github.com/EmileRouxSMB/templatePyMod/workflows/CI/badge.svg)
 
 [![Coverage Status](https://coveralls.io/repos/github/EmileRouxSMB/templatePyMod/badge.png?branch=main)](https://coveralls.io/github/EmileRouxSMB/templatePyMod?branch=main)
 
